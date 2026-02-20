@@ -1,0 +1,64 @@
+/* ===== Download Section — Exact Figma values ===== */
+
+.download-section--light {
+    background-color: var(--color-bg-pink);
+    padding: 60px 0;
+    width: 100%;
+}
+
+.download-section__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+}
+
+.download-section__content {
+    max-width: 644.643px;
+}
+
+.download-section__title {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 29.688px;
+    line-height: 45.04px;
+    letter-spacing: -0.8906px;
+    color: var(--color-primary);
+}
+
+.download-section__title--script {
+    font-family: var(--font-script);
+    font-weight: 400;
+    font-size: 45.804px;
+    line-height: 45.04px;
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.download-section__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .download-section--light {
+        padding: 40px 0;
+    }
+
+    .download-section__title {
+        font-size: 32.601px;
+        line-height: 49.46px;
+    }
+
+    .download-section__title--script {
+        font-size: 50.298px;
+        line-height: 49.46px;
+    }
+}

@@ -1,0 +1,38 @@
+<section class="accompaniment-section">
+    <div class="accompaniment-section__container">
+        <!-- Text content -->
+        <div class="accompaniment-section__content">
+            <h2 class="accompaniment-section__title">
+                <span class="accompaniment-section__title--script">Acompañamiento 1 a 1</span>
+            </h2>
+
+            <p class="accompaniment-section__intro">
+                Este proceso puede sentirse pesado si lo caminas solo/a. Aquí lo haremos más humano, más llevadero y
+                posible.
+            </p>
+            <p class="accompaniment-section__intro">Juntos trabajaremos en desarrollar:</p>
+
+            <!-- Benefits list -->
+            <ul class="accompaniment-section__benefits">
+                <li *ngFor="let benefit of benefits" class="accompaniment-section__benefit-item">
+                    <span class="accompaniment-section__benefit-icon">✓</span>
+                    <p class="accompaniment-section__benefit-text">
+                        <strong>{{ benefit.bold }}</strong> {{ benefit.text }}
+                    </p>
+                </li>
+            </ul>
+
+            <!-- Closing -->
+            <p class="accompaniment-section__closing">
+                Yo voy contigo, pero el <strong>camino es tuyo</strong>. Busco que sea un proceso breve, estratégico y
+                práctico. Centrado en soluciones.
+            </p>
+        </div>
+
+        <!-- Photo -->
+        <div class="accompaniment-section__photo">
+            <img src="assets/images/angela-portrait-2.png" alt="Ángela El Moro - Acompañamiento"
+                class="accompaniment-section__image" />
+        </div>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+<div class="lead-magnet-form" [ngClass]="'lead-magnet-form--' + variant">
+    <div class="lead-magnet-form__input-group">
+        <input type="email" class="lead-magnet-form__input" placeholder="Correo electrónico" [(ngModel)]="email" />
+        <button class="lead-magnet-form__button" type="button" (click)="onSubmit()">
+            ¡Lo quiero!
+        </button>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<!-- If a routerLink is provided, render as an anchor -->
+<a *ngIf="link; else buttonTpl" [routerLink]="link" class="btn-primary">
+    {{ label }}
+</a>
+
+<!-- Otherwise render as a button -->
+<ng-template #buttonTpl>
+    <button class="btn-primary" type="button" (click)="onClick()">
+        {{ label }}
+    </button>
+</ng-template>

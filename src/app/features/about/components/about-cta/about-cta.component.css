@@ -1,0 +1,55 @@
+/* ===== About CTA ===== */
+
+.about-cta {
+    max-width: var(--container-max-width);
+    margin: 40px auto 0;
+    padding: 0 var(--container-padding);
+}
+
+.about-cta__text {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    margin-bottom: 16px;
+}
+
+.about-cta__contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-cta__arrow {
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+.about-cta__email {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.about-cta__email:hover {
+    text-decoration: underline;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .about-cta {
+        margin: 24px auto 0;
+    }
+
+    .about-cta__text {
+        font-size: 24px;
+    }
+
+    .about-cta__email {
+        font-size: 24px;
+    }
+}

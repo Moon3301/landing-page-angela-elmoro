@@ -1,0 +1,145 @@
+/* ===== Footer — Exact Figma values ===== */
+
+.footer {
+    background-color: var(--color-primary);
+    width: 100%;
+    padding: 60px 0 40px;
+}
+
+.footer__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    gap: 40px 0;
+    align-items: start;
+}
+
+/* Logo */
+.footer__logo-section {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.footer__logo-img {
+    width: 213px;
+    height: 110px;
+    object-fit: contain;
+}
+
+/* Links */
+.footer__links {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    gap: 120px;
+    padding-left: 60px;
+}
+
+.footer__column-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: normal;
+    letter-spacing: -0.2318px;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__link {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-white);
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer__link:hover {
+    opacity: 1;
+}
+
+/* Social (inside contact column) */
+.footer__social {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__social-icon {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+
+/* Copyright */
+.footer__copyright {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: end;
+}
+
+.footer__copyright p {
+    font-family: var(--font-copyright);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: -0.2045px;
+    color: var(--color-white);
+    opacity: 0.5;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+    .footer__links {
+        gap: 60px;
+        padding-left: 30px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .footer {
+        padding: 40px 0 32px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer__logo-section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer__links {
+        grid-column: 1;
+        grid-row: 2;
+        flex-direction: column;
+        gap: 32px;
+        padding-left: 0;
+    }
+
+    .footer__copyright {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: start;
+    }
+}

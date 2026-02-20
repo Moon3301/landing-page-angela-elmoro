@@ -1,0 +1,28 @@
+<section class="examples-section">
+    <div class="examples-section__container">
+        <!-- Title -->
+        <h2 class="examples-section__title">
+            Déjame que te <span class="examples-section__title--highlight">explique</span> con ejemplos...
+        </h2>
+
+        <!-- Examples list -->
+        <ul class="examples-section__list">
+            <li *ngFor="let example of examples" class="examples-section__item">
+                <span class="examples-section__icon">✓</span>
+                <p class="examples-section__text">{{ example }}</p>
+            </li>
+        </ul>
+
+        <!-- Closing message -->
+        <div class="examples-section__closing">
+            <p class="examples-section__message">
+                Si te reconoces en alguno de estos momentos,
+                <span class="examples-section__message--script">de verdad, no estás solo/a</span>.
+            </p>
+            <p class="examples-section__message">
+                Te acompaño a <span class="examples-section__message--script">gestionar este cambio</span>,
+                con foco, calma y un rumbo claro.
+            </p>
+        </div>
+    </div>
+</section>

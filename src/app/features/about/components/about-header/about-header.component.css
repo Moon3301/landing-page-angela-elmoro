@@ -1,0 +1,39 @@
+/* ===== About Header ===== */
+
+.about-header {
+    max-width: var(--container-max-width);
+    margin: 0 auto 40px;
+    padding: 0 var(--container-padding);
+}
+
+.about-header__title--script {
+    font-family: var(--font-script);
+    font-weight: 400;
+    font-size: 55.89px;
+    line-height: 0.99;
+    color: var(--color-primary);
+}
+
+.about-header__tagline {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-primary);
+    margin-top: 12px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .about-header {
+        margin: 0 auto 24px;
+    }
+
+    .about-header__title--script {
+        font-size: 48px;
+    }
+
+    .about-header__tagline {
+        font-size: 24px;
+    }
+}

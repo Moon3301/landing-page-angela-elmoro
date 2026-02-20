@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400&family=Montserrat:wght@400;500;600&display=swap');
+
+/* ===== Swiper ===== */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import 'swiper/css/autoplay';
+
+/* ===== PrimeIcons ===== */
+@import "primeicons/primeicons.css";
+
+/* ===== Design Tokens ===== */
+:root {
+    /* Colors */
+    --color-primary: #2E3C73;
+    --color-bg-warm: #F6F1EB;
+    --color-bg-light: #F5F5F5;
+    --color-bg-pink: #FCEAEC;
+    --color-text-dark: #1E1E1E;
+    --color-text-muted: #333333;
+    --color-white: #FFFFFF;
+
+    /* Fonts — IvyPresto y Good Karma usan fallback hasta recibir archivos */
+    --font-heading: 'IvyPresto Headline', 'Georgia', 'Times New Roman', serif;
+    --font-script: 'Good Karma Smooth', 'Brush Script MT', 'Segoe Script', cursive;
+    --font-body: 'Montserrat', sans-serif;
+    --font-copyright: 'DM Sans', sans-serif;
+
+    /* Layout */
+    --container-max-width: 1440px;
+    --container-padding: 146px;
+    --navbar-height: 103px;
+}
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* ===== Responsive Overrides ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    :root {
+        --container-padding: 60px;
+        --navbar-height: 80px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    :root {
+        --container-padding: 24px;
+        --navbar-height: 72px;
+    }
+}

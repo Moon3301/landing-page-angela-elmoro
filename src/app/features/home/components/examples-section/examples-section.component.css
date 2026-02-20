@@ -1,0 +1,123 @@
+/* ===== Examples Section — Exact Figma values ===== */
+
+.examples-section {
+    background-color: var(--color-bg-light);
+    padding: 60px 0 80px;
+    width: 100%;
+}
+
+.examples-section__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Title */
+.examples-section__title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 0.99;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.examples-section__title--highlight {
+    font-style: italic;
+}
+
+/* List — 2 column layout */
+.examples-section__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 60px;
+    margin-bottom: 60px;
+}
+
+.examples-section__item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.examples-section__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+.examples-section__text {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.32px;
+    color: var(--color-text-dark);
+    text-align: justify;
+}
+
+/* Closing message */
+.examples-section__closing {
+    text-align: center;
+    max-width: 1074px;
+    margin: 0 auto;
+}
+
+.examples-section__message {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 25.234px;
+    line-height: 44.819px;
+    color: var(--color-primary);
+}
+
+.examples-section__message--script {
+    font-family: var(--font-script);
+    font-weight: 400;
+    font-size: 42.527px;
+    line-height: 44.819px;
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary);
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+    .examples-section__list {
+        gap: 16px 40px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .examples-section {
+        padding: 40px 0 60px;
+    }
+
+    .examples-section__list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .examples-section__text {
+        font-size: 24px;
+        line-height: 1.6;
+        letter-spacing: -0.48px;
+    }
+
+    .examples-section__message {
+        font-size: 30.008px;
+        line-height: 53.298px;
+    }
+
+    .examples-section__message--script {
+        font-size: 50.573px;
+        line-height: 53.298px;
+    }
+}

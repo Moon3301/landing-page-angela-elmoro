@@ -1,0 +1,14 @@
+/* ===== About Page — Container ===== */
+
+.about-page {
+    background-color: var(--color-bg-warm);
+    padding: 80px 0;
+    width: 100%;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .about-page {
+        padding: 60px 0;
+    }
+}

@@ -1,0 +1,15 @@
+<section class="faq-section">
+    <div class="faq-section__container">
+        <h2 class="faq-section__title">Preguntas frecuentes</h2>
+
+        <!-- PrimeNG Accordion -->
+        <p-accordion class="faq-section__accordion">
+            <p-accordion-panel *ngFor="let faq of faqs">
+                <p-accordion-header>{{ faq.question }}</p-accordion-header>
+                <p-accordion-content>
+                    <p class="faq-section__answer">{{ faq.answer }}</p>
+                </p-accordion-content>
+            </p-accordion-panel>
+        </p-accordion>
+    </div>
+</section>

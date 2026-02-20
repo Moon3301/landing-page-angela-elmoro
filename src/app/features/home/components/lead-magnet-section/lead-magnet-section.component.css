@@ -1,0 +1,73 @@
+/* ===== Lead Magnet Section — Exact Figma values ===== */
+
+.lead-magnet-section--dark {
+    background-color: var(--color-primary);
+    padding: 60px 0;
+    width: 100%;
+}
+
+.lead-magnet-section__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.lead-magnet-section__content {
+    flex: 1;
+    max-width: 602px;
+}
+
+.lead-magnet-section__title {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 28.438px;
+    line-height: 43.144px;
+    letter-spacing: -0.8531px;
+    color: var(--color-white);
+}
+
+.lead-magnet-section__title--script {
+    font-family: var(--font-script);
+    font-weight: 400;
+    font-size: 43.875px;
+    line-height: 43.144px;
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.lead-magnet-section__form {
+    flex-shrink: 0;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .lead-magnet-section__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .lead-magnet-section__content {
+        max-width: 100%;
+    }
+
+    .lead-magnet-section__title {
+        font-size: 32.601px;
+        line-height: 49.46px;
+    }
+
+    .lead-magnet-section__title--script {
+        font-size: 50.298px;
+        line-height: 49.46px;
+    }
+
+    .lead-magnet-section__form {
+        width: 100%;
+    }
+}

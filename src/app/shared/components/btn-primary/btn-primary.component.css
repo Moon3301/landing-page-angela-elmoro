@@ -1,0 +1,28 @@
+/* ===== Btn-Primary — Exact Figma values ===== */
+
+:host {
+    display: inline-block;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    padding: 19px 30px;
+    border-radius: 59px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.88;
+}

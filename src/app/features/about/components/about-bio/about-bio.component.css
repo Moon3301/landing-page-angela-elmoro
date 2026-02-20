@@ -1,0 +1,47 @@
+/* ===== About Bio ===== */
+
+.about-bio {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.about-bio__section {
+    margin-bottom: 40px;
+}
+
+.about-bio__text {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.68;
+    color: var(--color-text-muted);
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+.about-bio__photo {
+    margin-bottom: 40px;
+}
+
+.about-bio__image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .about-bio__section {
+        margin-bottom: 24px;
+    }
+
+    .about-bio__text {
+        font-size: 24px;
+        line-height: 1.8;
+    }
+
+    .about-bio__photo {
+        margin-bottom: 24px;
+    }
+}
