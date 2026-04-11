@@ -22,8 +22,8 @@ export class NavbarComponent {
 
     goToSection(section: string): void {
         // Si no estamos en la página de inicio, navegar primero
-        if (this.router.url !== '/') {
-            this.router.navigate(['/']).then(() => {
+        if (!this.router.url.includes('/home') && this.router.url !== '/') {
+            this.router.navigate(['/home']).then(() => {
                 // Esperar a que el componente se cargue antes de hacer scroll
                 setTimeout(() => {
                     this.scrollToSection(section);

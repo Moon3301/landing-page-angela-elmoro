@@ -4,11 +4,13 @@
     max-width: var(--container-max-width);
     margin: 0 auto 40px;
     padding: 0 var(--container-padding);
+    text-align: center;
 }
 
 .about-header__title--script {
     font-family: var(--font-script);
-    font-weight: 400;
+    font-style: normal;
+    font-weight: 300;
     font-size: 55.89px;
     line-height: 0.99;
     color: var(--color-primary);

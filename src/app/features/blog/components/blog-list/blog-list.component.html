@@ -1,0 +1,12 @@
+<section class="blog-list-section">
+    <div class="grid-container">
+        <!-- Routeamos la tarjeta entera al post por id -->
+        <a [routerLink]="['/blog', post.id || '1']" *ngFor="let post of visiblePosts" style="text-decoration: none;">
+            <app-blog-card [post]="post"></app-blog-card>
+        </a>
+    </div>
+    
+    <div class="load-more-container" *ngIf="visibleCount < posts.length">
+        <button class="btn-secondary" (click)="loadMore()">Cargar más</button>
+    </div>
+</section>

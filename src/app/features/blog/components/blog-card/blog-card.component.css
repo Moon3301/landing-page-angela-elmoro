@@ -1,0 +1,66 @@
+.card-wrapper {
+    background-color: var(--color-white);
+    border: 1px solid rgba(46, 60, 115, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-wrapper:hover {
+    box-shadow: 0px 8px 30px rgba(46, 60, 115, 0.12);
+    transform: translateY(-6px);
+}
+
+.card-image-box {
+    height: 209px;
+    width: 100%;
+    overflow: hidden;
+    /* Sombreamiento opcional indicado en figma 0px 3px 3px rgba(0,0,0,0.25) solo en la imagen ? lo simplificamos */
+    border-bottom: 1px solid rgba(46, 60, 115, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card-wrapper:hover .card-image {
+    transform: scale(1.06); 
+}
+
+.card-content {
+    /* Basado en el espacio de Figma: separacion del titulo y boton */
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 14px;
+}
+
+.card-title {
+    font-family: var(--font-body); 
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-primary);
+    line-height: 1.35;
+    margin: 0;
+}
+
+.read-more {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-top: auto; 
+    transition: opacity 0.3s ease;
+}
+
+.read-more:hover {
+    opacity: 0.7;
+}

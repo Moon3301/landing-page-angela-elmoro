@@ -20,13 +20,13 @@
                     <a routerLink="/about" routerLinkActive="navbar__link--active" class="navbar__link">Sobre mí</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Servicios</a>
+                    <a (click)="goToSection('examples-section')" class="navbar__link" style="cursor: pointer;">Servicios</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Blog</a>
+                    <a routerLink="/blog" routerLinkActive="navbar__link--active" class="navbar__link">Blog</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Contacto</a>
+                    <a (click)="goToSection('is-for-me-section')" class="navbar__link" style="cursor: pointer;">Contacto</a>
                 </li>
                 <li class="navbar__item">
                     <a href="javascript:void(0)" class="navbar__link navbar__link--cta">AGENDAR sesión</a>
