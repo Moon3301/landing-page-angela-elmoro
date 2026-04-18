@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
     templateUrl: './hero-section.component.html',
     styleUrl: './hero-section.component.css'
 })
-export class HeroSectionComponent { }
+export class HeroSectionComponent {
+
+    openBooking(): void {
+        window.open('https://calendar.app.google/ZgSqaiEG1GZCHmfA9', '_blank');
+    }
+}

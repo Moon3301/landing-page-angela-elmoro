@@ -1,6 +1,6 @@
 <section class="download-section download-section--light">
     <div class="download-section__container">
-        <div class="download-section__content">
+        <div class="download-section__content" appReveal>
             <!-- Descriptive text -->
             <h2 class="download-section__title">
                 Descarga gratis mi hoja de ruta para gestionar el cambio con calma y empieza a poner orden
@@ -8,9 +8,9 @@
             </h2>
         </div>
 
-        <div class="download-section__form">
+        <div class="download-section__form" appReveal [revealDelay]="150">
             <!-- Shared lead magnet form (light variant) -->
-            <app-lead-magnet-form variant="light"></app-lead-magnet-form>
+            <app-lead-magnet-form variant="light" [showSuccessMessage]="true"></app-lead-magnet-form>
         </div>
     </div>
 </section>

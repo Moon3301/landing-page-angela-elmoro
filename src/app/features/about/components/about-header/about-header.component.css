@@ -7,6 +7,11 @@
     text-align: center;
 }
 
+/* Load animation — above the fold */
+.about-header__title {
+    animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
 .about-header__title--script {
     font-family: var(--font-script);
     font-style: normal;
@@ -23,6 +28,7 @@
     line-height: 1.6;
     color: var(--color-primary);
     margin-top: 12px;
+    animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
 }
 
 /* ===== Mobile ===== */

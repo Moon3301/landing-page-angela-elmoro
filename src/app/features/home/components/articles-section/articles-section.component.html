@@ -1,19 +1,27 @@
 <section class="articles-section">
     <div class="articles-section__container">
-        <h2 class="articles-section__title">Artículos que te podrían interesar</h2>
+        <h2 class="articles-section__title" appReveal>Artículos que te podrían interesar</h2>
 
-        <!-- Swiper carousel -->
-        <swiper-container class="articles-section__swiper" slides-per-view="1" space-between="24" navigation="true"
-            pagination="false" loop="false" breakpoints='{"768": {"slidesPerView": 2}, "1025": {"slidesPerView": 3}}'>
-            <swiper-slide *ngFor="let article of articles">
-                <app-article-card [imageUrl]="article.imageUrl" [title]="article.title" [articleLink]="article.link">
-                </app-article-card>
-            </swiper-slide>
-        </swiper-container>
+        <!-- Swiper + Próximamente overlay wrapper -->
+        <div class="articles-section__swiper-wrapper">
+            <!-- Swiper carousel -->
+            <swiper-container class="articles-section__swiper" slides-per-view="1" space-between="24" navigation="true"
+                pagination="false" loop="false" breakpoints='{"768": {"slidesPerView": 2}, "1025": {"slidesPerView": 3}}'>
+                <swiper-slide *ngFor="let article of articles">
+                    <app-article-card [imageUrl]="article.imageUrl" [title]="article.title" [articleLink]="article.link">
+                    </app-article-card>
+                </swiper-slide>
+            </swiper-container>
 
-        <!-- CTA -->
-        <div class="articles-section__cta">
-            <app-btn-primary label="Ir al blog"></app-btn-primary>
+            <!-- Próximamente overlay -->
+            <div class="articles-section__overlay">
+                <p class="articles-section__overlay-text">Próximamente</p>
+            </div>
+        </div>
+
+        <!-- CTA — disabled while blog is not ready -->
+        <div class="articles-section__cta" appReveal [revealDelay]="200">
+            <span class="articles-section__btn-disabled">Ir al blog</span>
         </div>
     </div>
 </section>

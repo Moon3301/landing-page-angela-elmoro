@@ -1,8 +1,30 @@
 <div class="lead-magnet-form" [ngClass]="'lead-magnet-form--' + variant">
-    <div class="lead-magnet-form__input-group">
-        <input type="email" class="lead-magnet-form__input" placeholder="Correo electrónico" [(ngModel)]="email" />
-        <button class="lead-magnet-form__button" type="button" (click)="onSubmit()">
-            ¡Lo quiero!
-        </button>
-    </div>
+
+    <ng-container *ngIf="!submitted; else successMsg">
+        <div class="lead-magnet-form__input-group">
+            <input
+                type="email"
+                class="lead-magnet-form__input"
+                placeholder="Correo electrónico"
+                [(ngModel)]="email"
+                [disabled]="loading" />
+            <button
+                class="lead-magnet-form__button"
+                type="button"
+                (click)="onSubmit()"
+                [disabled]="loading">
+                {{ loading ? 'Enviando...' : '¡Lo quiero!' }}
+            </button>
+        </div>
+        <p *ngIf="error" class="lead-magnet-form__error">
+            Ocurrió un error al enviar. Por favor intenta de nuevo.
+        </p>
+    </ng-container>
+
+    <ng-template #successMsg>
+        <p class="lead-magnet-form__success">
+            ¡Listo! Te enviamos la hoja de ruta a tu correo.
+        </p>
+    </ng-template>
+
 </div>

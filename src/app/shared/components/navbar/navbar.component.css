@@ -85,6 +85,53 @@
     letter-spacing: 0;
 }
 
+/* Blog link — bloqueado hasta que esté listo */
+.navbar__link--disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Tooltip "Próximamente" sobre Blog */
+.navbar__item--tooltip {
+    position: relative;
+}
+
+.navbar__tooltip {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Flechita superior del tooltip */
+.navbar__tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: var(--color-white);
+}
+
+.navbar__item--tooltip:hover .navbar__tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
 /* ===== Tablet ===== */
 @media (max-width: 1024px) {
     .navbar__list {

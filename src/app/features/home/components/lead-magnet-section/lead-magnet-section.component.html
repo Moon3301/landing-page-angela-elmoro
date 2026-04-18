@@ -1,6 +1,6 @@
 <section class="lead-magnet-section lead-magnet-section--dark">
     <div class="lead-magnet-section__container">
-        <div class="lead-magnet-section__content">
+        <div class="lead-magnet-section__content" appReveal revealDirection="left">
             <!-- Descriptive text -->
             <h2 class="lead-magnet-section__title">
                 Descarga gratis mi hoja de ruta para gestionar el cambio con calma y empieza a poner orden
@@ -8,7 +8,7 @@
             </h2>
         </div>
 
-        <div class="lead-magnet-section__form">
+        <div class="lead-magnet-section__form" appReveal revealDirection="right" [revealDelay]="150">
             <!-- Shared lead magnet form -->
             <app-lead-magnet-form variant="dark"></app-lead-magnet-form>
         </div>

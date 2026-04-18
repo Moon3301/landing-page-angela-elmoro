@@ -16,7 +16,6 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-
 }
 
 .hero-section__bg-image {
@@ -27,6 +26,13 @@
     position: absolute;
     top: 0;
     left: 0;
+    /* Subtle Ken-Burns zoom on load */
+    animation: heroBgZoom 9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroBgZoom {
+    from { transform: scale(1.08); }
+    to   { transform: scale(1);    }
 }
 
 .hero-section__overlay {
@@ -48,7 +54,8 @@
     width: 100%;
 }
 
-/* Title with mixed typography */
+/* ===== Load animations (fires immediately — above the fold) ===== */
+
 .hero-section__title {
     font-family: var(--font-heading);
     font-weight: 400;
@@ -57,6 +64,7 @@
     color: var(--color-white);
     max-width: 569px;
     margin-bottom: 24px;
+    animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
 
 .hero-section__title--serif {
@@ -81,6 +89,13 @@
     color: var(--color-white);
     max-width: 562px;
     margin-bottom: 32px;
+    animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.52s both;
+}
+
+/* CTA wrapper */
+.hero-section__cta {
+    animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.72s both;
+    display: inline-block;
 }
 
 /* ===== Tablet ===== */

@@ -12,13 +12,17 @@ import { BtnPrimaryComponent } from './components/btn-primary/btn-primary.compon
 import { LeadMagnetFormComponent } from './components/lead-magnet-form/lead-magnet-form.component';
 import { ArticleCardComponent } from './components/article-card/article-card.component';
 
+// Shared directives
+import { RevealDirective } from './directives/reveal.directive';
+
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
     BtnPrimaryComponent,
     LeadMagnetFormComponent,
-    ArticleCardComponent
+    ArticleCardComponent,
+    RevealDirective
   ],
   imports: [
     CommonModule,
@@ -32,6 +36,7 @@ import { ArticleCardComponent } from './components/article-card/article-card.com
     BtnPrimaryComponent,
     LeadMagnetFormComponent,
     ArticleCardComponent,
+    RevealDirective,
     PrimengModule
   ]
 })

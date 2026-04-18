@@ -1,5 +1,92 @@
 :host {
     display: block;
     min-height: 100vh;
-    background-color: var(--color-bg-light);
+    background-color: var(--color-bg-warm);
+}
+
+/* ===== Blog Coming Soon ===== */
+.blog-soon {
+    min-height: calc(100vh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.blog-soon__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-soon__content {
+    text-align: center;
+    max-width: 620px;
+    animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+/* Eyebrow label */
+.blog-soon__eyebrow {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    opacity: 0.5;
+    margin-bottom: 16px;
+}
+
+/* Main script title */
+.blog-soon__title {
+    font-family: var(--font-script);
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 0.95;
+    color: var(--color-primary);
+    margin-bottom: 32px;
+}
+
+.blog-soon__subtitle {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--color-text-muted);
+    margin-bottom: 48px;
+}
+
+/* Back button */
+.blog-soon__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 16px 28px;
+    border-radius: 59px;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.blog-soon__btn:hover {
+    opacity: 0.88;
+    transform: translateX(-3px);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .blog-soon__title {
+        font-size: 60px;
+    }
+
+    .blog-soon__subtitle {
+        font-size: 16px;
+    }
 }

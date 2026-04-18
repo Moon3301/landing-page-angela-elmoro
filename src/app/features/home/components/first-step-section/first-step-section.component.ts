@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
     templateUrl: './first-step-section.component.html',
     styleUrl: './first-step-section.component.css'
 })
-export class FirstStepSectionComponent { }
+export class FirstStepSectionComponent {
+    openBooking(): void {
+        window.open('https://calendar.app.google/ZgSqaiEG1GZCHmfA9', '_blank');
+    }
+}

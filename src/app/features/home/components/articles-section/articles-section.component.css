@@ -1,9 +1,19 @@
-/* ===== Articles Section — Exact Figma values ===== */
+/* ===== Articles Section ===== */
 
 .articles-section {
     background-color: var(--color-bg-light);
     padding: 80px 0;
     width: 100%;
+    /* Initial state: hidden for scroll-reveal */
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Triggered by IntersectionObserver */
+.articles-section--visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .articles-section__container {
@@ -21,17 +31,78 @@
     margin-bottom: 40px;
 }
 
-/* Swiper overrides */
-.articles-section__swiper {
+/* ===== Swiper + overlay wrapper ===== */
+.articles-section__swiper-wrapper {
+    position: relative;
     margin-bottom: 40px;
-    --swiper-navigation-color: var(--color-primary);
-    --swiper-navigation-size: 28px;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
-/* CTA — align right */
+/* Swiper overrides */
+.articles-section__swiper {
+    --swiper-navigation-color: var(--color-primary);
+    --swiper-navigation-size: 28px;
+    display: block;
+}
+
+/* ===== Próximamente overlay ===== */
+.articles-section__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(46, 60, 115, 0.55);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.articles-section__overlay-text {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.92);
+    letter-spacing: -1px;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Stagger on individual slides (section-level reveal) ===== */
+.articles-section--visible swiper-slide:nth-child(1) { animation: slideUp 0.5s ease 0.1s both; }
+.articles-section--visible swiper-slide:nth-child(2) { animation: slideUp 0.5s ease 0.25s both; }
+.articles-section--visible swiper-slide:nth-child(3) { animation: slideUp 0.5s ease 0.4s both; }
+.articles-section--visible swiper-slide:nth-child(4) { animation: slideUp 0.5s ease 0.55s both; }
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ===== CTA disabled button ===== */
 .articles-section__cta {
     display: flex;
     justify-content: flex-end;
+}
+
+.articles-section__btn-disabled {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    padding: 19px 30px;
+    border-radius: 59px;
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+    white-space: nowrap;
 }
 
 /* ===== Mobile ===== */
@@ -47,5 +118,9 @@
 
     .articles-section__cta {
         justify-content: center;
+    }
+
+    .articles-section__overlay-text {
+        font-size: 32px;
     }
 }

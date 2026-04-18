@@ -1,20 +1,23 @@
 <section id="examples-section" class="examples-section">
     <div class="examples-section__container">
         <!-- Title -->
-        <h2 class="examples-section__title">
+        <h2 class="examples-section__title" appReveal>
             Déjame que te <span class="examples-section__title--highlight">explique</span> con ejemplos...
         </h2>
 
         <!-- Examples list -->
         <ul class="examples-section__list">
-            <li *ngFor="let example of examples" class="examples-section__item">
+            <li *ngFor="let example of examples; let i = index"
+                class="examples-section__item"
+                appReveal
+                [revealDelay]="i * 70">
                 <span class="examples-section__icon">✓</span>
                 <p class="examples-section__text">{{ example }}</p>
             </li>
         </ul>
 
         <!-- Closing message -->
-        <div class="examples-section__closing">
+        <div class="examples-section__closing" appReveal [revealDelay]="180">
             <p class="examples-section__message">
                 Si te reconoces en alguno de estos momentos,
                 <span class="examples-section__message--script">de verdad, no estás solo/a</span>.

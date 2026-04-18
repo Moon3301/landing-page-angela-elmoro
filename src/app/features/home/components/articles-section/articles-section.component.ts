@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, OnDestroy } from '@angular/core';
 
 interface Article {
     imageUrl: string;
@@ -12,7 +12,7 @@ interface Article {
     templateUrl: './articles-section.component.html',
     styleUrl: './articles-section.component.css'
 })
-export class ArticlesSectionComponent {
+export class ArticlesSectionComponent implements OnInit, OnDestroy {
     articles: Article[] = [
         {
             imageUrl: 'assets/images/article-1.png',
@@ -35,4 +35,28 @@ export class ArticlesSectionComponent {
             link: '#'
         }
     ];
+
+    private observer!: IntersectionObserver;
+
+    constructor(private el: ElementRef) {}
+
+    ngOnInit(): void {
+        this.observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('articles-section--visible');
+                        this.observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        this.observer.observe(this.el.nativeElement.querySelector('.articles-section'));
+    }
+
+    ngOnDestroy(): void {
+        this.observer.disconnect();
+    }
 }

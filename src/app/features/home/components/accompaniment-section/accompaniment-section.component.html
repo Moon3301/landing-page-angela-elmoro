@@ -1,7 +1,7 @@
 <section class="accompaniment-section">
     <div class="accompaniment-section__container">
-        <!-- Text content -->
-        <div class="accompaniment-section__content">
+        <!-- Text content (left) -->
+        <div class="accompaniment-section__content" appReveal revealDirection="left">
             <h2 class="accompaniment-section__title">
                 <span class="accompaniment-section__title--script">Acompañamiento 1 a 1</span>
             </h2>
@@ -14,7 +14,10 @@
 
             <!-- Benefits list -->
             <ul class="accompaniment-section__benefits">
-                <li *ngFor="let benefit of benefits" class="accompaniment-section__benefit-item">
+                <li *ngFor="let benefit of benefits; let i = index"
+                    class="accompaniment-section__benefit-item"
+                    appReveal
+                    [revealDelay]="150 + i * 60">
                     <span class="accompaniment-section__benefit-icon">✓</span>
                     <p class="accompaniment-section__benefit-text">
                         <strong>{{ benefit.bold }}</strong> {{ benefit.text }}
@@ -23,14 +26,14 @@
             </ul>
 
             <!-- Closing -->
-            <p class="accompaniment-section__closing">
+            <p class="accompaniment-section__closing" appReveal [revealDelay]="350">
                 Yo voy contigo, pero el <strong>camino es tuyo</strong>. Busco que sea un proceso breve, estratégico y
                 práctico. Centrado en soluciones.
             </p>
         </div>
 
-        <!-- Photo -->
-        <div class="accompaniment-section__photo">
+        <!-- Photo (right) -->
+        <div class="accompaniment-section__photo" appReveal revealDirection="right" [revealDelay]="100">
             <img src="assets/images/angela-portrait-2.png" alt="Ángela El Moro - Acompañamiento"
                 class="accompaniment-section__image" />
         </div>

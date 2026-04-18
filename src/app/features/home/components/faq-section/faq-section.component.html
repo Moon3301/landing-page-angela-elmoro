@@ -1,10 +1,13 @@
 <section class="faq-section">
     <div class="faq-section__container">
-        <h2 class="faq-section__title">Preguntas frecuentes</h2>
+        <h2 class="faq-section__title" appReveal>Preguntas frecuentes</h2>
 
         <!-- PrimeNG Accordion -->
-        <p-accordion class="faq-section__accordion">
-            <p-accordion-panel *ngFor="let faq of faqs">
+        <p-accordion class="faq-section__accordion" [value]="0">
+            <p-accordion-panel *ngFor="let faq of faqs; let i = index"
+                [value]="i"
+                appReveal
+                [revealDelay]="i * 80">
                 <p-accordion-header>{{ faq.question }}</p-accordion-header>
                 <p-accordion-content>
                     <p class="faq-section__answer">{{ faq.answer }}</p>

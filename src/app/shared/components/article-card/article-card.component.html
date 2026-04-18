@@ -1,6 +1,8 @@
 <p-card class="article-card" styleClass="article-card__card">
     <ng-template #header>
-        <img [src]="imageUrl" [alt]="title" class="article-card__image" />
+        <div class="article-card__image-wrapper">
+            <img [src]="imageUrl" [alt]="title" class="article-card__image" />
+        </div>
     </ng-template>
     <h3 class="article-card__title">{{ title }}</h3>
     <a [href]="articleLink" class="article-card__link">Leer más</a>
