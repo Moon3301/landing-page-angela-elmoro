@@ -2,7 +2,7 @@
 
 .about-header {
     max-width: var(--container-max-width);
-    margin: 0 auto 40px;
+    margin: 0 auto 48px;
     padding: 0 var(--container-padding);
     text-align: center;
 }
@@ -17,7 +17,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 55.89px;
-    line-height: 0.99;
+    line-height: 1.1;
     color: var(--color-primary);
 }
 
@@ -31,17 +31,34 @@
     animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 767px) {
+/* ===== Tablet (≤900px) ===== */
+@media (max-width: 900px) {
     .about-header {
-        margin: 0 auto 24px;
+        margin-bottom: 32px;
     }
 
     .about-header__title--script {
-        font-size: 48px;
+        font-size: 44px;
     }
 
     .about-header__tagline {
-        font-size: 24px;
+        font-size: 16px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .about-header {
+        margin-bottom: 24px;
+        text-align: left;
+    }
+
+    .about-header__title--script {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .about-header__tagline {
+        font-size: 15px;
     }
 }

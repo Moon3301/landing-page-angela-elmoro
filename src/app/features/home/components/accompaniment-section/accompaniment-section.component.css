@@ -1,4 +1,4 @@
-/* ===== Accompaniment Section — Exact Figma values ===== */
+/* ===== Accompaniment Section ===== */
 
 .accompaniment-section {
     background-color: var(--color-bg-warm);
@@ -105,19 +105,23 @@
     object-fit: cover;
 }
 
-/* ===== Tablet ===== */
-@media (max-width: 1024px) {
+/* ===== Tablet wide (1025px–1280px) ===== */
+@media (max-width: 1280px) {
     .accompaniment-section__container {
-        gap: 40px;
+        gap: 48px;
     }
 
     .accompaniment-section__photo {
         width: 400px;
     }
+
+    .accompaniment-section__image {
+        height: 440px;
+    }
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 767px) {
+/* ===== Tablet (≤900px) — stack columns ===== */
+@media (max-width: 900px) {
     .accompaniment-section {
         padding: 60px 0;
     }
@@ -131,30 +135,29 @@
         max-width: 100%;
     }
 
-    .accompaniment-section__title--script {
-        font-size: 60.75px;
-    }
-
-    .accompaniment-section__intro {
-        font-size: 24px;
-        letter-spacing: -0.48px;
-    }
-
-    .accompaniment-section__benefit-text {
-        font-size: 24px;
-        letter-spacing: -0.48px;
-    }
-
-    .accompaniment-section__closing {
-        font-size: 24px;
-        letter-spacing: -0.48px;
-    }
-
     .accompaniment-section__photo {
         width: 100%;
     }
 
     .accompaniment-section__image {
-        height: auto;
+        height: 340px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .accompaniment-section__title--script {
+        font-size: 52px;
+    }
+
+    .accompaniment-section__intro,
+    .accompaniment-section__benefit-text,
+    .accompaniment-section__closing {
+        font-size: 16px;
+        letter-spacing: -0.32px;
+    }
+
+    .accompaniment-section__image {
+        height: 260px;
     }
 }

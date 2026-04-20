@@ -2,13 +2,21 @@
 
 .about-page {
     background-color: var(--color-bg-warm);
-    padding: 80px 0;
+    /* Top breathing room — main-layout already offsets the fixed navbar */
+    padding: 60px 0 80px;
     width: 100%;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+    .about-page {
+        padding: 48px 0 60px;
+    }
 }
 
 /* ===== Mobile ===== */
 @media (max-width: 767px) {
     .about-page {
-        padding: 60px 0;
+        padding: 32px 0 60px;
     }
 }

@@ -1,5 +1,6 @@
 /* ===== Main Layout ===== */
 
 .main-content {
-    margin-top: 5%;
+    /* Offset the fixed navbar at every breakpoint using the CSS custom property */
+    padding-top: var(--navbar-height);
 }

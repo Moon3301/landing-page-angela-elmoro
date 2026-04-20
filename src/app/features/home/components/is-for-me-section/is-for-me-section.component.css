@@ -1,4 +1,4 @@
-/* ===== Is-For-Me Section — Exact Figma values ===== */
+/* ===== Is-For-Me Section ===== */
 
 .is-for-me-section {
     background-color: var(--color-primary);
@@ -48,6 +48,7 @@
     align-items: center;
     gap: 8px;
     margin-top: 24px;
+    flex-wrap: wrap;
 }
 
 .is-for-me-section__arrow {
@@ -62,6 +63,7 @@
     line-height: 43.736px;
     color: var(--color-white);
     text-decoration: none;
+    word-break: break-all;
 }
 
 .is-for-me-section__email:hover {
@@ -92,8 +94,8 @@
     top: 5%;
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 767px) {
+/* ===== Tablet (≤900px) — stack ===== */
+@media (max-width: 900px) {
     .is-for-me-section {
         padding: 60px 0;
     }
@@ -103,21 +105,30 @@
         gap: 40px;
     }
 
+    .is-for-me-section__decoration {
+        align-self: flex-end;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
     .is-for-me-section__title {
-        font-size: 42.958px;
+        font-size: 32px;
         line-height: 1.3;
     }
 
     .is-for-me-section__text {
-        font-size: 24px;
-        line-height: 1.8;
+        font-size: 16px;
+        line-height: 1.75;
     }
 
     .is-for-me-section__email {
-        font-size: 24px;
+        font-size: 18px;
+        line-height: 1.5;
     }
 
-    .is-for-me-section__decoration {
-        align-self: flex-end;
+    .is-for-me-section__blob {
+        width: 160px;
+        height: 141px;
     }
 }

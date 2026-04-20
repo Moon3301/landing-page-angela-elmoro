@@ -17,7 +17,7 @@
         <nav class="navbar__nav" [class.navbar__nav--open]="menuOpen" aria-label="Navegación principal">
             <ul class="navbar__list">
                 <li class="navbar__item">
-                    <a routerLink="/about" routerLinkActive="navbar__link--active" class="navbar__link">Sobre mí</a>
+                    <a routerLink="/about" routerLinkActive="navbar__link--active" class="navbar__link" (click)="closeMenu()">Sobre mí</a>
                 </li>
                 <li class="navbar__item">
                     <a (click)="goToSection('examples-section')" class="navbar__link" style="cursor: pointer;">Servicios</a>
@@ -33,7 +33,8 @@
                     <a href="https://calendar.app.google/ZgSqaiEG1GZCHmfA9"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="navbar__link navbar__link--cta">AGENDAR sesión</a>
+                       class="navbar__link navbar__link--cta"
+                       (click)="closeMenu()">AGENDAR sesión</a>
                 </li>
             </ul>
         </nav>

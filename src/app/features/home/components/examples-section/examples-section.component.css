@@ -1,4 +1,4 @@
-/* ===== Examples Section — Exact Figma values ===== */
+/* ===== Examples Section ===== */
 
 .examples-section {
     background-color: var(--color-bg-light);
@@ -17,7 +17,7 @@
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 35px;
-    line-height: 0.99;
+    line-height: 1.2;
     color: var(--color-primary);
     margin-bottom: 40px;
 }
@@ -26,7 +26,7 @@
     font-style: italic;
 }
 
-/* List — 2 column layout */
+/* List — 2 column grid */
 .examples-section__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -86,10 +86,27 @@
     text-decoration-color: var(--color-primary);
 }
 
-/* ===== Tablet ===== */
+/* ===== Tablet (≤1024px) ===== */
 @media (max-width: 1024px) {
     .examples-section__list {
         gap: 16px 40px;
+    }
+}
+
+/* ===== Tablet small (≤900px) ===== */
+@media (max-width: 900px) {
+    .examples-section__title {
+        font-size: 28px;
+    }
+
+    .examples-section__message {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .examples-section__message--script {
+        font-size: 36px;
+        line-height: 1.3;
     }
 }
 
@@ -99,6 +116,11 @@
         padding: 40px 0 60px;
     }
 
+    .examples-section__title {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+
     .examples-section__list {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -106,18 +128,17 @@
     }
 
     .examples-section__text {
-        font-size: 24px;
-        line-height: 1.6;
-        letter-spacing: -0.48px;
+        font-size: 15px;
+        letter-spacing: -0.2px;
     }
 
     .examples-section__message {
-        font-size: 30.008px;
-        line-height: 53.298px;
+        font-size: 18px;
+        line-height: 1.6;
     }
 
     .examples-section__message--script {
-        font-size: 50.573px;
-        line-height: 53.298px;
+        font-size: 30px;
+        line-height: 1.2;
     }
 }

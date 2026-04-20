@@ -1,7 +1,7 @@
 :host {
     display: block;
-    min-height: 100vh;
     background-color: var(--color-bg-warm);
+    /* main-layout already adds padding-top: var(--navbar-height) */
 }
 
 /* ===== Blog Coming Soon ===== */
@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .blog-soon__container {
@@ -80,13 +80,33 @@
     transform: translateX(-3px);
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 767px) {
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
     .blog-soon__title {
-        font-size: 60px;
+        font-size: 72px;
     }
 
     .blog-soon__subtitle {
         font-size: 16px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .blog-soon {
+        padding: 40px 0;
+    }
+
+    .blog-soon__title {
+        font-size: 56px;
+    }
+
+    .blog-soon__subtitle {
+        font-size: 15px;
+    }
+
+    .blog-soon__eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
     }
 }

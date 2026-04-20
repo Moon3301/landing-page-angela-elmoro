@@ -1,4 +1,4 @@
-/* ===== First Step Section — Exact Figma values ===== */
+/* ===== First Step Section ===== */
 
 .first-step-section {
     background-color: var(--color-bg-warm);
@@ -71,24 +71,27 @@
     margin-bottom: 0;
 }
 
-/* Photo */
-.first-step-section__photo {
-    flex-shrink: 0;
-    width: 528px;
-}
-
-.first-step-section__image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 767px) {
+/* ===== Tablet (≤900px) ===== */
+@media (max-width: 900px) {
     .first-step-section {
         padding: 60px 0;
     }
 
+    .first-step-section__title {
+        font-size: 28px;
+    }
+
+    .first-step-section__title--script {
+        font-size: 44px;
+    }
+
+    .first-step-section__text {
+        font-size: 16px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
     .first-step-section__body {
         flex-direction: column;
         gap: 24px;
@@ -96,19 +99,15 @@
     }
 
     .first-step-section__title {
-        font-size: 42.958px;
+        font-size: 26px;
     }
 
     .first-step-section__title--script {
-        font-size: 47px;
+        font-size: 38px;
     }
 
     .first-step-section__text {
-        font-size: 24px;
-        line-height: 1.68;
-    }
-
-    .first-step-section__photo {
-        width: 100%;
+        font-size: 15px;
+        line-height: 1.7;
     }
 }

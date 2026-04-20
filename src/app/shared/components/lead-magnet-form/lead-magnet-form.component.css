@@ -1,4 +1,4 @@
-/* ===== Lead Magnet Form — Exact Figma values ===== */
+/* ===== Lead Magnet Form ===== */
 
 .lead-magnet-form__input-group {
     display: flex;
@@ -9,7 +9,9 @@
 
 /* ----- Input ----- */
 .lead-magnet-form__input {
-    width: 490px;
+    /* Fluid: fills the container up to 490px */
+    width: 100%;
+    max-width: 490px;
     height: 57.198px;
     border-radius: 14px;
     padding: 0 20px;
@@ -26,7 +28,8 @@
 
 /* ----- Button ----- */
 .lead-magnet-form__button {
-    width: 490px;
+    width: 100%;
+    max-width: 490px;
     height: 57.198px;
     border-radius: 14px;
     border: none;
@@ -44,7 +47,7 @@
     opacity: 0.88;
 }
 
-/* ===== Dark variant (sobre fondo azul oscuro) ===== */
+/* ===== Dark variant ===== */
 .lead-magnet-form--dark .lead-magnet-form__input {
     border: 1px solid var(--color-white);
     color: var(--color-white);
@@ -60,7 +63,7 @@
     color: var(--color-primary);
 }
 
-/* ===== Light variant (sobre fondo rosa) ===== */
+/* ===== Light variant ===== */
 .lead-magnet-form--light .lead-magnet-form__input {
     border: 1px solid var(--color-primary);
     border-radius: 18px;
@@ -111,13 +114,10 @@
     color: var(--color-primary);
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 767px) {
-    .lead-magnet-form__input {
-        width: 100%;
-    }
-
+/* ===== Tablet (≤900px) ===== */
+@media (max-width: 900px) {
+    .lead-magnet-form__input,
     .lead-magnet-form__button {
-        width: 100%;
+        max-width: 100%;
     }
 }

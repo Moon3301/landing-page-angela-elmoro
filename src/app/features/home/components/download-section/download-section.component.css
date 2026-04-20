@@ -1,4 +1,4 @@
-/* ===== Download Section — Exact Figma values ===== */
+/* ===== Download Section ===== */
 
 .download-section--light {
     background-color: var(--color-bg-pink);
@@ -18,7 +18,8 @@
 }
 
 .download-section__content {
-    max-width: 644.643px;
+    max-width: 644px;
+    width: 100%;
 }
 
 .download-section__title {
@@ -46,19 +47,37 @@
     justify-content: center;
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 767px) {
-    .download-section--light {
-        padding: 40px 0;
-    }
-
+/* ===== Tablet (≤900px) ===== */
+@media (max-width: 900px) {
     .download-section__title {
-        font-size: 32.601px;
-        line-height: 49.46px;
+        font-size: 24px;
+        line-height: 1.5;
+        letter-spacing: -0.5px;
     }
 
     .download-section__title--script {
-        font-size: 50.298px;
-        line-height: 49.46px;
+        font-size: 38px;
+        line-height: 1.2;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+    .download-section--light {
+        padding: 48px 0;
+    }
+
+    .download-section__title {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .download-section__title--script {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .download-section__container {
+        gap: 24px;
     }
 }

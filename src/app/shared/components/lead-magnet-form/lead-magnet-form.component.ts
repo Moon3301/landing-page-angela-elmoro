@@ -10,6 +10,8 @@ import { EmailService } from '../../../core/services/email.service';
 export class LeadMagnetFormComponent {
     /** 'dark' = white text on dark bg; 'light' = dark text on light bg */
     @Input() variant: 'dark' | 'light' = 'dark';
+    /** Whether to show the inline success message after submission (default: true) */
+    @Input() showSuccessMessage: boolean = true;
 
     email: string = '';
     loading: boolean = false;
