@@ -27,7 +27,7 @@ export class FaqSectionComponent {
         },
         {
             question: '¿Puedo cancelar o reagendar una sesión?',
-            answer: 'Sí, puedes cancelar o reagendar con al menos 24 horas de anticipación sin costo adicional.'
+            answer: 'Sí, puedes cancelar o reagendar con al menos 24 horas de anticipación.'
         }
     ];
 }

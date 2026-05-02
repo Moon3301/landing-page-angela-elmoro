@@ -42,6 +42,16 @@
     margin-bottom: 16px;
 }
 
+.is-for-me-section__credentials {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--color-white);
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
 /* Contact */
 .is-for-me-section__contact {
     display: flex;
@@ -61,7 +71,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 43.736px;
-    color: var(--color-white);
+    color: #FFD966;
     text-decoration: none;
     word-break: break-all;
 }
@@ -81,17 +91,17 @@
 }
 
 .is-for-me-section__blob {
-    width: 220.581px;
-    height: 194.577px;
+    width: 280.581px;
+    height: 280.581px;
     object-fit: contain;
 }
 
 .is-for-me-section__logo {
-    width: 80%;
+    width: 60%;
     object-fit: cover;
     position: absolute;
     z-index: 1000;
-    top: 5%;
+    top: 35%;
 }
 
 /* ===== Tablet (≤900px) — stack ===== */

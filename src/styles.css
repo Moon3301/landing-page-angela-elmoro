@@ -22,8 +22,8 @@
     --color-white: #FFFFFF;
 
     /* Fonts — IvyPresto y Good Karma usan fallback hasta recibir archivos */
-    --font-heading: 'IvyPresto Headline', 'Georgia', 'Times New Roman', serif;
-    --font-script: 'Good Karma Smooth', 'Brush Script MT', 'Segoe Script', cursive;
+    --font-heading: 'Arial', sans-serif;
+    --font-script: 'Ink Free', 'Good Karma Smooth', 'Brush Script MT', 'Segoe Script', cursive;
     --font-body: 'Montserrat', sans-serif;
     --font-copyright: 'DM Sans', sans-serif;
 
@@ -44,6 +44,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
 }
 
 body {
