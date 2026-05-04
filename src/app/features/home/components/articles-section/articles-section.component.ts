@@ -15,22 +15,22 @@ interface Article {
 export class ArticlesSectionComponent implements OnInit, OnDestroy {
     articles: Article[] = [
         {
-            imageUrl: 'assets/images/article-1.png',
+            imageUrl: '/assets/images/article-1.webp',
             title: 'Jubilación simbólica: cerrar una etapa sin apagar tu identidad.',
             link: '#'
         },
         {
-            imageUrl: 'assets/images/article-2.png',
+            imageUrl: '/assets/images/article-2.webp',
             title: 'Cómo tomar decisiones cuando hay incertidumbre.',
             link: '#'
         },
         {
-            imageUrl: 'assets/images/article-3.png',
+            imageUrl: '/assets/images/article-3.webp',
             title: 'Mudanza y pertenencia: crear redes y rutinas en la nueva ciudad.',
             link: '#'
         },
         {
-            imageUrl: 'assets/images/article-3.png',
+            imageUrl: '/assets/images/article-3.webp',
             title: 'Mudanza y pertenencia: crear redes y rutinas en la nueva ciudad.',
             link: '#'
         }

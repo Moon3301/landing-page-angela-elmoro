@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgOptimizedImage } from '@angular/common';
 
 import { PrimengModule } from '../primeng/primeng.module';
 
@@ -28,7 +29,8 @@ import { RevealDirective } from './directives/reveal.directive';
     CommonModule,
     RouterModule,
     FormsModule,
-    PrimengModule
+    PrimengModule,
+    NgOptimizedImage
   ],
   exports: [
     NavbarComponent,
@@ -37,7 +39,8 @@ import { RevealDirective } from './directives/reveal.directive';
     LeadMagnetFormComponent,
     ArticleCardComponent,
     RevealDirective,
-    PrimengModule
+    PrimengModule,
+    NgOptimizedImage
   ]
 })
 export class SharedModule { }
