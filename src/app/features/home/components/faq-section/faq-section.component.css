@@ -13,6 +13,7 @@
 }
 
 .faq-section__title {
+    text-align: center;
     font-family: var(--font-heading);
     font-weight: 400;
     font-size: 35px;
@@ -24,10 +25,11 @@
 
 /* Override PrimeNG Accordion styles */
 .faq-section__accordion {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 50%;
+    max-width: 80%;
 }
 
 /* ===== Tablet (≤1024px) — accordion a ancho completo ===== */
