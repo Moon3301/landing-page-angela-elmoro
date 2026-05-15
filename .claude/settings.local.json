@@ -7,7 +7,9 @@
       "Read(//c/tmp/**)",
       "Bash(mkdir -p docx_unpacked)",
       "Bash(cp \"C:/Users/CarlosAcevedo/Downloads/Revisión de la web angelaelmoro \\(1\\).docx\" /tmp/revision.docx)",
-      "Bash(unzip -o /tmp/revision.docx -d /tmp/docx_unpacked/)"
+      "Bash(unzip -o /tmp/revision.docx -d /tmp/docx_unpacked/)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\CarlosAcevedo\\\\Desktop\\\\env-dev\\\\Angela Moro\\\\landing-page-angela-elmoro\\\\src\" -Filter \"*.css\" -Recurse)",
+      "Bash(Select-Object -ExpandProperty FullName)"
     ]
   }
 }

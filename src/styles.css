@@ -45,6 +45,9 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--navbar-height);
+    /* Contiene el overflow horizontal de las animaciones reveal (translateX ±32px)
+       sin afectar position:fixed del navbar */
+    overflow-x: hidden;
 }
 
 body {
@@ -56,6 +59,7 @@ body {
     background-color: var(--color-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 img {

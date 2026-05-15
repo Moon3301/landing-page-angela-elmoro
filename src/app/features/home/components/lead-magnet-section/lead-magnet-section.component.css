@@ -18,7 +18,7 @@
 
 .lead-magnet-section__content {
     flex: 1;
-    max-width: 602px;
+    max-width: 652px;
 }
 
 .lead-magnet-section__title {
@@ -43,7 +43,7 @@
 .lead-magnet-section__form {
     flex-shrink: 0;
     width: 100%;
-    max-width: 490px;
+    max-width: 620px;
 }
 
 /* ===== Tablet (≤900px) — stack ===== */
@@ -61,7 +61,7 @@
 
     .lead-magnet-section__form {
         width: 100%;
-        max-width: 490px;
+        max-width: 620px;
     }
 }
 

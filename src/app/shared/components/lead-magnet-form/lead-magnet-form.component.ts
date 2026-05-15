@@ -14,6 +14,7 @@ export class LeadMagnetFormComponent {
     @Input() showSuccessMessage: boolean = true;
 
     email: string = '';
+    name: string = '';
     loading: boolean = false;
     submitted: boolean = false;
     error: boolean = false;
@@ -21,7 +22,7 @@ export class LeadMagnetFormComponent {
     constructor(private emailService: EmailService) {}
 
     onSubmit(): void {
-        if (!this.email || this.loading) return;
+        if (!this.email || !this.name || this.loading) return;
 
         this.loading = true;
         this.error = false;
@@ -29,10 +30,12 @@ export class LeadMagnetFormComponent {
         this.emailService.sendRoadmapEmail(
             { 
                 email: this.email, 
+                name: this.name,
                 subject: 'Solicitud de hoja de ruta - Web Angela El Moro', 
                 message: `
                     <p>Hola Angela,</p>
                     <p>Un usuario ha solicitado el envio a su correo de la hoja de ruta a través del formulario de la web Angela El Moro.</p>
+                    <p>El nombre del usuario es: ${this.name}</p>
                     <p>El correo del usuario es: ${this.email}</p>
 
                     <p>Este mensaje fue enviado automáticamente por el sistema de la web Angela El Moro.</p>
@@ -43,6 +46,7 @@ export class LeadMagnetFormComponent {
                 this.submitted = true;
                 this.loading = false;
                 this.email = '';
+                this.name = '';
             },
             error: () => {
                 this.error = true;

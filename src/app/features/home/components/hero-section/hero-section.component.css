@@ -40,12 +40,15 @@
 
 .hero-section__overlay {
     position: absolute;
-    top: 7px;
+    top: 0;
     left: 0;
-    width: 715px;
-    height: 651px;
+    /* Ancho máximo del efecto en desktop; en móvil se sobreescribe a 100% */
+    width: min(715px, 100%);
+    height: 100%;
     background: rgba(0, 0, 0, 0.52);
     filter: blur(160.6px);
+    /* Evita que el blur pinte fuera del contenedor en Safari/Chrome móvil */
+    will-change: filter;
 }
 
 /* Content */
@@ -119,15 +122,19 @@
 /* ===== Mobile (≤767px) ===== */
 @media (max-width: 767px) {
     .hero-section {
-        /* Altura reducida = menor factor de escala sobre la imagen landscape → menos zoom */
-        height: 68svh;
-        min-height: 500px;
-        align-items: center;
+        /* Altura ajustada para que quepa el contenido completo */
+        height: 100svh;
+        min-height: 560px;
+        /* flex-start: el contenido arranca desde arriba con padding, evita que
+           el centrado vertical empuje el título bajo el navbar */
+        align-items: flex-start;
         padding-bottom: 0;
     }
 
     .hero-section__content {
-        padding: 0 24px;
+        /* Necesita 2× navbar-height porque la sección arranca con margin-top: -navbar-height
+           (fuera del flujo) y el navbar es position:fixed. Compensación total = 72+72+24 = 168px */
+        padding: calc(var(--navbar-height) * 2 + 24px) 24px 40px;
     }
 
     /* Enfocar la cara de Angela */

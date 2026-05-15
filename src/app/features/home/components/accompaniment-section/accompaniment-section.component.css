@@ -148,7 +148,7 @@
 /* ===== Mobile ===== */
 @media (max-width: 767px) {
     .accompaniment-section__title--script {
-        font-size: 52px;
+        font-size: 42px;
     }
 
     .accompaniment-section__intro,
